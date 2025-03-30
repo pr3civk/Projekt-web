@@ -1,22 +1,17 @@
 import { useState } from "react";
 
 const sections = [
-	{
-		id: "1section",
-		label: "1 section",
-	},
-	{
-		id: "2section",
-		label: "2 section",
-	},
-	{
-		id: "3section",
-		label: "3 section",
-	},
-	{
-		id: "4section",
-		label: "4 section",
-	},
+	{ id: "1", label: "1 section" },
+	{ id: "2", label: "2 section" },
+	{ id: "3", label: "3 section" },
+	{ id: "4", label: "4 section" },
+	{ id: "5", label: "5 section" },
+	{ id: "6", label: "6 section" },
+	{ id: "7", label: "7 section" },
+	{ id: "8", label: "8 section" },
+	{ id: "9", label: "9 section" },
+	{ id: "10", label: "10 section" },
+	{ id: "11", label: "11 section" },
 ];
 
 export const Aside = () => {
