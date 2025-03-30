@@ -14,6 +14,8 @@ npm run dev
 
 Wtedy powinno się otworzyć okno przeglądarki z widocznym projektem.
 
+```WAŻNE: Przed kolejnymi krokami na pewno trzeba będzie sprawdzić czy webGL jest włączony w przeglądarce. Bez tego nic nie będzie działać.```
+
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
