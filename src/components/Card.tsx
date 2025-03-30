@@ -1,19 +1,26 @@
-export const Card = ({ children }: { children: React.ReactNode }) => {
-	return <div className="card-content">{children}</div>;
+import { type HTMLAttributes } from "react";
+
+export const Card = (props: HTMLAttributes<HTMLDivElement>) => {
+	return <section className="card" {...props} />;
 };
 
-const Header = ({ children }: { children: React.ReactNode }) => {
-	return <div className="card-header">{children}</div>;
+export const Wrapper = (props: HTMLAttributes<HTMLDivElement>) => {
+	return <div className="card-wrapper" {...props} />;
 };
 
-const Body = ({ children }: { children: React.ReactNode }) => {
-	return <div className="card-body text-sm ">{children}</div>;
+const Header = (props: HTMLAttributes<HTMLDivElement>) => {
+	return <header className="card-header" {...props} />;
 };
 
-const Footer = ({ children }: { children: React.ReactNode }) => {
-	return <div className="card-footer">{children}</div>;
+const Body = (props: HTMLAttributes<HTMLDivElement>) => {
+	return <div className="card-body text-sm " {...props} />;
+};
+
+const Footer = (props: HTMLAttributes<HTMLDivElement>) => {
+	return <footer className="card-footer" {...props} />;
 };
 
 Card.Header = Header;
 Card.Body = Body;
 Card.Footer = Footer;
+Card.Wrapper = Wrapper;

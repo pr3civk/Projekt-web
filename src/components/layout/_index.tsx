@@ -1,12 +1,13 @@
 import Footer from './Footer'
-
-const Layout = ({children}: {children: React.ReactNode}) => {
-  return (
-    <main className='container'>
-      {children}
-      <Footer />  
-    </main>
-  )
-}
+import { Aside } from "./Aside";
+const Layout = ({ children }: { children: React.ReactNode }) => {
+	return (
+		<main className="container">
+			<Aside />
+			{children}
+			<Footer />
+		</main>
+	);
+};
 
 export default Layout

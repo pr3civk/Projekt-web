@@ -3,6 +3,7 @@
   --background: #080808;
   --background-content: #31313166;
   --text-color: #fff;
+  --text-color-secondary: #ffffff80;
   --button-color: #fff;
   --button-border: #ffffff1e;
 }
@@ -15,6 +16,7 @@ body {
   line-height: 1.5;
   font-weight: 400;
   text-align: left;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -28,9 +30,16 @@ body {
   align-items: center;
 }
 
-.card-content{
+.card{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.card-wrapper{
   backdrop-filter: blur(10px);
-  background-color: var(--background-content);
+  background: linear-gradient(to right, #000000, var(--background-content));
   border-radius: 1rem;
   padding: 1rem;
   box-sizing: border-box;
@@ -42,7 +51,6 @@ body {
   max-width: 676px;
   max-height: 100%;
   border: 1px solid var(--button-border);
-
 }
 
 .card-header, .card-body, .card-footer{
@@ -85,19 +93,19 @@ h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea, select {
 }
 
 h1{
-  font-size: clamp(1rem, 2vw, 2rem);
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
 }
 
 h2{
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
 }
 
 h3{
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-size: clamp(1rem, 3vw, 1.35rem);
 }
 
 h4{
-  font-size: clamp(1rem, 2vw, 1.125rem);
+  font-size: clamp(0.875rem, 3vw, 1.25rem);
 }
 
 .text-primary {
@@ -118,4 +126,46 @@ h4{
 
 .text-xs {
   font-size: 0.75rem;
+}
+
+/* Sticky Bar Styles */
+aside {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100dvh;
+  background-color: var(--background-content);
+  backdrop-filter: blur(10px);
+  border-left: 1px solid var(--button-border);
+  z-index: 50;
+  padding: 1rem;
+}
+
+aside ul{
+  list-style: none;
+}
+
+aside a{
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.aside-content {
+  padding: 1rem;
+}
+
+.aside p {
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+.aside-link-active{
+  color: var(--text-color);
+}
+
+
+.aside-link-inactive{
+  color: var(--text-color-secondary);
 }
